@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Iniciar Sesión</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+    <form [formGroup]="loginForm">
+
+        <ion-item>
+            <ion-input type="email" placeholder="Ingrese su correo electrónico" formControlName="email"></ion-input>
+            <div class="validation-errors" *ngIf="fieldValid('email')">
+                Ingrese su correo electrónico
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-input type="password" placeholder="Ingrese su contraseña" formControlName="password"></ion-input>
+            <div class="validation-errors" *ngIf="fieldValid('password')">
+                Ingrese su contraseña
+            </div>
+        </ion-item>
+        <ion-button expand="block" type="submit" (click)="login()">Entrar</ion-button>
+
+    </form>
+    <hr>
+    <ion-button expand="block" type="button" color="success" routerLink="/sign-up">Crear Cuenta</ion-button>
+
+
+</ion-content>

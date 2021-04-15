@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Vender Token</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]="form">
+        <ion-item>
+            <ion-input type="number" placeholder="Cantidad" formControlName="quantity"></ion-input>
+            <div class="validation-errors" *ngIf="fieldValid('quantity')">
+                Ingrese una cantidad
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-input type="number" placeholder="Precio" formControlName="price"></ion-input>
+            <div class="validation-errors" *ngIf="fieldValid('price')">
+                Ingrese un precio
+            </div>
+        </ion-item>
+        <ion-button expand="block" type="submit" (click)="create()">Publicar</ion-button>
+    </form>
+
+</ion-content>

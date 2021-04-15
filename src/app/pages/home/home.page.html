@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Token Disponibles</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-list>
+        <ion-item *ngFor="let row of tokens">
+            <ion-label>{{row.owner}} <br>Disponibles: {{row.quantity}} | Precio: {{ row.price | currency }} </ion-label>
+            <ion-button *ngIf="_user.getUserAuthenticated().id != row.owner_id" (click)="presentModal(row)">Comprar</ion-button>
+            <ion-button *ngIf="_user.getUserAuthenticated().id == row.owner_id" color="danger" (click)="cancelToken(row)">Cancelar</ion-button>
+        </ion-item>
+    </ion-list>
+
+
+</ion-content>
