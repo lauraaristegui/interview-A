@@ -57,7 +57,7 @@ jobs:
       - run:
           name: Install Dependencies
           command: npm install
-      - run: npm run deploy -- --non-interactive --force --project interview-a-365cd  --token AIzaSyBCeYML9Ci94umktualEaB7FJJrd0LAxSw
+      - run: npm run deploy -- --non-interactive --force --project interview-a-365cd  --token 1:330654545843:web:dad83617e9da668bd03dc6 
 workflows:
   ci-build:
     jobs:
