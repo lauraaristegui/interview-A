@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyANOkq9WzDZf3rRd1bHH2mkJnLEJFcq5IA",
-    authDomain: "interview-a-365cd.firebaseapp.com",
-    databaseURL: "https://test-tok-86811.firebaseio.com",
-    projectId: "interview-a-365cd",
-    storageBucket: "test-tok-86811.appspot.com",
-    messagingSenderId: "330654545843",
-    appId: "1:330654545843:web:dad83617e9da668bd03dc6",
+  apiKey: "AIzaSyBCeYML9Ci94umktualEaB7FJJrd0LAxSw",
+  authDomain: "interview-a-365cd.firebaseapp.com",
+  projectId: "interview-a-365cd",
+  storageBucket: "interview-a-365cd.appspot.com",
+  messagingSenderId: "330654545843",
+  appId: "1:330654545843:web:dad83617e9da668bd03dc6",
+  measurementId: "G-KQDYGX2HTZ"
   }
 };
 
