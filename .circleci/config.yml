@@ -10,16 +10,16 @@ jobs:
       - checkout
       - run:
           name: Install WebApp Dependencies
-          command: cd www && npm install
+          command: cd src && npm install
       - run:
           name: Run WebApp Lint
-          command: cd www && npm run lint
+          command: cd src && npm run lint
       - run:
           name: Run WebApp Unit Tests
-          command: cd www && xvfb-run -a npm run test -- --progress=false --browsers=ChromeHeadless
+          command: cd src && xvfb-run -a npm run test -- --progress=false --browsers=ChromeHeadless
       - run:
           name: Build WebApp
-          command: cd www && npm run build 
+          command: cd src && npm run build 
       - run:
           name: Install Functions Dependencies
           command: cd functions && npm install
@@ -35,16 +35,16 @@ jobs:
       - checkout
       - run:
           name: Install WebApp Dependencies
-          command: cd www && npm install
+          command: cd src && npm install
       - run:
           name: Run WebApp Lint
-          command: cd www && npm run lint
+          command: cd src && npm run lint
       - run:
           name: Run WebApp Unit Tests
-          command: cd www && xvfb-run -a npm run test -- --progress=false --browsers=ChromeHeadless
+          command: cd src && xvfb-run -a npm run test -- --progress=false --browsers=ChromeHeadless
       - run:
           name: Build WebApp 
-          command: cd www && npm run build -- --configuration production
+          command: cd src && npm run build -- --configuration production
       - run:
           name: Install Functions Dependencies
           command: cd functions && npm install
