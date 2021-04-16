@@ -1,7 +1,77 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
+executors:
+  node-executor:
+    docker:
+      - image: circleci/node:10-browsers
+jobs:
+  build:
+    executor: node-executor
+    steps:
+      - checkout
+      - run:
+          name: Install WebApp Dependencies
+          command: cd www && npm install
+      - run:
+          name: Run WebApp Lint
+          command: cd www && npm run lint
+      - run:
+          name: Run WebApp Unit Tests
+          command: cd www && xvfb-run -a npm run test -- --progress=false --browsers=ChromeHeadless
+      - run:
+          name: Build WebApp
+          command: cd www && npm run build 
+      - run:
+          name: Install Functions Dependencies
+          command: cd functions && npm install
+      - run:
+          name: Run Functions Unit Tests
+          command: cd functions && npm test
+      - run:
+          name: Build Functions
+          command: cd functions && npm run build
+  deploy:
+    executor: node-executor
+    steps:
+      - checkout
+      - run:
+          name: Install WebApp Dependencies
+          command: cd www && npm install
+      - run:
+          name: Run WebApp Lint
+          command: cd www && npm run lint
+      - run:
+          name: Run WebApp Unit Tests
+          command: cd www && xvfb-run -a npm run test -- --progress=false --browsers=ChromeHeadless
+      - run:
+          name: Build WebApp 
+          command: cd www && npm run build -- --configuration production
+      - run:
+          name: Install Functions Dependencies
+          command: cd functions && npm install
+      - run:
+          name: Run Functions Unit Tests
+          command: cd functions && npm test
+      - run:
+          name: Build Functions
+          command: cd functions && npm run build
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run: npm run deploy -- --non-interactive --force --project "$FIREBASE_PROJECT_PROD" --token "$FIREBASE_TOKEN_PROD"
 workflows:
-  node:
+  ci-build:
     jobs:
-      - node
+      - build:
+          filters:
+            branches:
+              ignore:
+                - main
+                - develop
+  deploy-workflow:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - main
+                - develop
