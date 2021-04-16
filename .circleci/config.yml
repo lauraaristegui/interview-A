@@ -23,12 +23,12 @@ jobs:
       - run:
           name: Install Functions Dependencies
           command: cd functions && npm install
-      - run:
-          name: Run Functions Unit Tests
-          command: cd functions && npm test
-      - run:
-          name: Build Functions
-          command: cd functions && npm run build
+#      - run:
+#          name: Run Functions Unit Tests
+#          command: cd functions && npm test
+#      - run:
+#          name: Build Functions
+#          command: cd functions && npm run build
   deploy:
     executor: node-executor
     steps:
@@ -45,15 +45,15 @@ jobs:
       - run:
           name: Build WebApp 
           command: cd src && npm run build -- --configuration production
-      - run:
-          name: Install Functions Dependencies
-          command: cd functions && npm install
-      - run:
-          name: Run Functions Unit Tests
-          command: cd functions && npm test
-      - run:
-          name: Build Functions
-          command: cd functions && npm run build
+#      - run:
+#          name: Install Functions Dependencies
+#          command: cd functions && npm install
+#      - run:
+#          name: Run Functions Unit Tests
+#          command: cd functions && npm test
+#      - run:
+#          name: Build Functions
+#          command: cd functions && npm run build
       - run:
           name: Install Dependencies
           command: npm install
