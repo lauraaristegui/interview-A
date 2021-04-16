@@ -14,9 +14,9 @@ jobs:
 #      - run:
 #         name: Run WebApp Lint
 #          command: cd src && npm run lint
-      - run:
-          name: Run WebApp Unit Tests
-          command: cd src && xvfb-run -a npm run test -- --progress=false --browsers=ChromeHeadless
+#      - run:
+#          name: Run WebApp Unit Tests
+#          command: cd src && xvfb-run -a npm run test -- --progress=false --browsers=ChromeHeadless
       - run:
           name: Build WebApp
           command: cd src && npm run build 
@@ -39,9 +39,9 @@ jobs:
 #      - run:
 #          name: Run WebApp Lint
 #          command: cd src && npm run lint
-      - run:
-          name: Run WebApp Unit Tests
-          command: cd src && xvfb-run -a npm run test -- --progress=false --browsers=ChromeHeadless
+#      - run:
+#          name: Run WebApp Unit Tests
+#          command: cd src && xvfb-run -a npm run test -- --progress=false --browsers=ChromeHeadless
       - run:
           name: Build WebApp 
           command: cd src && npm run build -- --configuration production
