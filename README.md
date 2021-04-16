@@ -16,6 +16,7 @@ Ejercicio 3: posicionar en la pantalla un boton de "compra optima", donde se com
 Ejercicio 4: mantener un contador de cuanta plata se ha gastado hasta el momento, y el valor promedio por token.
 
 Ejercicios bonus:
+
 (bug) loguearse con distintos usuarios en la misma ventana del browser genera conflictos de usuarios, permitiendo poner a la venta tokens de otros usuarios, y generar la apariencia de que puedo comprar mis propios tokens.
 
-(bug) 
+(bug) no toma el numero de compra, y solo compra de a dos.
