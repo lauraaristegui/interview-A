@@ -11,9 +11,9 @@ jobs:
       - run:
           name: Install WebApp Dependencies
           command: cd src && npm install
-      - run:
-          name: Run WebApp Lint
-          command: cd src && npm run lint
+#      - run:
+#         name: Run WebApp Lint
+#          command: cd src && npm run lint
       - run:
           name: Run WebApp Unit Tests
           command: cd src && xvfb-run -a npm run test -- --progress=false --browsers=ChromeHeadless
@@ -36,9 +36,9 @@ jobs:
       - run:
           name: Install WebApp Dependencies
           command: cd src && npm install
-      - run:
-          name: Run WebApp Lint
-          command: cd src && npm run lint
+#      - run:
+#          name: Run WebApp Lint
+#          command: cd src && npm run lint
       - run:
           name: Run WebApp Unit Tests
           command: cd src && xvfb-run -a npm run test -- --progress=false --browsers=ChromeHeadless
