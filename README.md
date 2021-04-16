@@ -12,3 +12,10 @@ Ejercicio 1: Maqueteado: incorporar campo de apellido al regitro y combo selecto
 Ejercicio 2: agregar apellido al registro de usuario y genero.
 
 Ejercicio 3: posicionar en la pantalla un boton de "compra optima", donde se compren los tokens mas baratos dado el numero maximo que estoy dispuesto a comprar. 
+
+Ejercicio 4: mantener un contador de cuanta plata se ha gastado hasta el momento, y el valor promedio por token.
+
+Ejercicios bonus:
+(bug) loguearse con distintos usuarios en la misma ventana del browser genera conflictos de usuarios, permitiendo poner a la venta tokens de otros usuarios, y generar la apariencia de que puedo comprar mis propios tokens.
+
+(bug) 
