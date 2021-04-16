@@ -6,8 +6,22 @@
     "serve": "firebase emulators:start --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
+    "deploy": "firebase deploy",
     "logs": "firebase functions:log"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "firebase deploy",
+    "deploy:staging": "firebase deploy --project=staging",
+    "deploy:local:prod-vsp": "run-s lint:www build:www:prod-vsp build:prototype build:functions deploy:prod-vsp",
+    "firebase": "firebase",
+    "start:www": "npm run start --prefix www",
+    "deploy:functions": "npm run build --prefix functions && firebase deploy --only functions",
+    "precommit": "pretty-quick --staged",
+    "pretty-quick": "pretty-quick",
+    "check-pr": "npm run lint --prefix www && npm run build --prefix www -- --configuration staging && npm test --prefix functions && npm run build --prefix functions",
+    "test:firebase": "mocha --timeout=10000",
+    "lint:www": "npm run lint --prefix www"
   },
   "engines": {
     "node": "12"
