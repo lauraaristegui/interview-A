@@ -24,5 +24,9 @@ Ejercicios bonus:
 Nota: si la base de datos firebase te genera problemas de permisos, conectarla a una propia vacia.
 
 Para installar, en el directorio principal correr:
+
+<code>
  npm i
+ 
  npm start
+</code>
