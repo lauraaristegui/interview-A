@@ -22,3 +22,7 @@ Ejercicios bonus:
 (bug) no toma el numero de compra, y solo compra de a dos.
 
 Nota: si la base de datos firebase te genera problemas de permisos, conectarla a una propia vacia.
+
+Para installar, en el directorio principal correr:
+ npm i
+ npm start
