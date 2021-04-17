@@ -20,3 +20,5 @@ Ejercicios bonus:
 (bug) loguearse con distintos usuarios en la misma ventana del browser genera conflictos de usuarios, permitiendo poner a la venta tokens de otros usuarios, y generar la apariencia de que puedo comprar mis propios tokens.
 
 (bug) no toma el numero de compra, y solo compra de a dos.
+
+Nota: si la base de datos firebase te genera problemas de permisos, conectarla a una propia vacia.
