@@ -1,0 +1,28 @@
+ion-title{
+   font-size: 30px;
+   margin:30px;
+   height: 20px;
+   background: var(--ion-color-medium-contrast); 
+}
+
+ion-input{
+    width:100px;
+    height: 20px;  margin:10px;
+    height: 50px;
+    padding:15px;
+    border: 1px solid #12A19A;
+    border: 1px solid #12A19A;
+    border-radius: 10px;
+    opacity: 1;        
+}
+
+ion-button{
+    background-color: var(--ion-color-tertiary);
+    border-radius: 30px;
+    margin:30px;
+    text-align: center;
+    font: normal normal bold 15px/19px Montserrat;
+    letter-spacing: 0.9px;
+    color: #FFFFFF;
+    opacity: 1;
+    }
